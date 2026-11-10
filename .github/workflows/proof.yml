@@ -12,6 +12,7 @@ jobs:
       tools: ''
       targets: ''
       command: |
+        git fetch --depth 1 origin 2bf1b9275b330202ee10e6bcaea78c56847567dd
         git switch --detach 2bf1b9275b330202ee10e6bcaea78c56847567dd
         cargo fmt -p craft-proof --check
         cargo clippy -p craft-proof --all-targets --locked -- -D warnings
